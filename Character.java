@@ -80,20 +80,37 @@ public abstract class Character {
     }
 
 
-    public void specialize(){
+    public abstract void specialize();/*{
 	oldStrength = _strength;
 	oldDefense = _defense;
 		int i = (int)(Math.random() * _defense);
 		_strength += i;
 		_defense -= i;
 		
-	}
-    public void normalize(){
+	}*/
+    public abstract void normalize();/*{
 		_strength = oldStrength; 
 		_defense = oldDefense;
-	}
-    public static String about() {
-	return  "Warrior: A bulky, tanky type of fighter who has a large amount of armor and health to soak up damage. They don't do much damage, but they are also very hard to kill. /n Mage: A fragile fighter that is capable of outputting large amounts of damage with their powerful spells, but have very low health and defense, meaning they also die very quickly. /n Rogue: A crafty fighter that can deal huge amounts of damage in short bursts. They rely on their speed to get in and out of situations without dying. /n Dragonborn: An absolute beast that can't be stopped by any force, human or otherwise. /n Gnome: A very weak fighter that doesn't deal much damage and doesn't have much health. They're not really that great at anything, but they're really fun and provide great moral support.";
+	}*/
+    public String about() {
+		if (this.getClass() == Warrior.class){
+			return "Warrior: A bulky, tanky type of fighter who has a large amount of armor and health to soak up damage. They don't do much damage, but they are also very hard to kill.";
+			}
+		else if (this.getClass() == Mage.class){
+			return "Mage: A fragile fighter that is capable of outputting large amounts of damage with their powerful spells, but have very low health and defense, meaning they also die very quickly.";
+			}
+		else if (this.getClass() == Rogue.class){
+			return "Rogue: A crafty fighter that can deal huge amounts of damage in short bursts. They rely on their speed to get in and out of situations without dying.";
+			}
+		else if (this.getClass() == Dragonborn.class){
+			return "Dragonborn: An absolute beast that can't be stopped by any force, human or otherwise.";
+			}
+		else if (this.getClass() == Gnome.class){
+			return "Gnome: A very weak fighter that doesn't deal much damage and doesn't have much health. They're not really that great at anything, but they're really fun and provide great moral support.";
+			}
+		else{
+			return"What is this? No one knows...";
+			}
     }
 	
 

@@ -73,7 +73,7 @@ public class YoRPG
 	}
 	catch ( IOException e ) { }
 
-        s = "Intrepid warrior, what class of duelistr doth thee wish to beest ? (State your fighting type): ";
+    s = "Intrepid warrior, what class of duelistr doth thee wish to beest ? (State your fighting type): ";
 	s += "\n 1: Warrior";
 	s += "\t 2: Mage";
 	s += "\t 3: Rogue";
@@ -86,7 +86,7 @@ public class YoRPG
 	    fighterType = Integer.parseInt( in.readLine() );
 	}
 	catch (IOException e) { }
-	System.out.println(pat);
+	//System.out.println(pat);
 	if (fighterType == 1) {
 	    pat = new Warrior( name );
 		//System.out.println(pat);
@@ -112,8 +112,7 @@ public class YoRPG
 		//System.out.println(pat);
 	}
 	//System.out.println(pat);
-	
-
+	System.out.println(pat.about());
     }//end newGame()
 
 
@@ -137,7 +136,7 @@ public class YoRPG
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
 	    smaug = new Monster();
-		System.out.println(pat);
+		//System.out.println(pat);
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
 		// Give user the option of using a special attack:

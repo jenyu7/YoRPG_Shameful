@@ -2,7 +2,7 @@
   class Character -- superclass for combatants in Ye Olde RPG
   =============================================*/
 
-public class Character {
+public abstract class Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     protected String _name;
@@ -35,7 +35,7 @@ public class Character {
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public int getDefense() { return _defense; }
-    public int getName() { return _name; }
+    public String getName() { return _name; }
    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     
@@ -76,7 +76,7 @@ public class Character {
       =============================================*/
     public void lowerHP( int damageInflicted ) {
 	_hitPts = _hitPts - damageInflicted;
-	if (_hitPts < 0) {_hitPts = 0}
+	if (_hitPts < 0) {_hitPts = 0;}
     }
 
 

@@ -1,5 +1,5 @@
  
-public class Mage extends Character {
+public class Rogue extends Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     // other attribs inerited from superclass
@@ -11,11 +11,11 @@ public class Mage extends Character {
       pre:  instance vars are declared
       post: initializes instance vars.
       =============================================*/
-    public Mage() {
-	_name = "Antonidas";
-	_hitPts = 50;
-	_strength = 200;
-	_defense = 25;
+    public Rogue() {
+	_name = "Chrysanths";
+	_hitPts = 30;
+	_strength = 350;
+	_defense = 15;
 	_attack = .8;
     }
 
@@ -25,7 +25,7 @@ public class Mage extends Character {
       pre:  instance vars are declared
       post: initializes instance vars. _name is set to input String.
       =============================================*/
-    public Mage( String name ) {
+    public Rogue( String name ) {
 	this();
 	_name = name;
     }
@@ -36,7 +36,7 @@ public class Mage extends Character {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     
-    //prepare a Mage for a special attack
+    //prepare a Rogue for a special attack
     public void specialize() {
 	_attack = 1.5;
 	_defense = 10;
@@ -48,5 +48,5 @@ public class Mage extends Character {
 	_defense = 25;
     }
 
-}//end class Mage
+}//end class Rogue
 

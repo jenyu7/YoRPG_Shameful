@@ -15,8 +15,8 @@ public class YoRPG
     public final static int MAX_ENCOUNTERS = 5;
 
     //each round, a Warrior and a Monster will be instantiated...
-    private Warrior pat;   //Is it man or woman?
-    private Monster smaug; //Friendly generic monster name?
+    protected Character pat;   //Is it man or woman?
+    protected Monster smaug; //Friendly generic monster name?
 
     private int moveCount;
     private boolean gameOver;
@@ -61,9 +61,9 @@ public class YoRPG
 	System.out.print( s );
 
 	try {
-	    int difficulty = Integer.parseInt( in.readLine() );
+	    difficulty = Integer.parseInt( in.readLine() );
 	}
-	catch ( IOException e ) { }
+	catch ( IOException e ) {}
 
 	s = "Intrepid warrior, what doth thy call thyself? (State your name): ";
 	System.out.print( s );
@@ -74,11 +74,11 @@ public class YoRPG
 	catch ( IOException e ) { }
 
         s = "Intrepid warrior, what class of duelistr doth thee wish to beest ? (State your fighting type): ";
-	s += "/n 1: Warrior";
-	s += "/t 2: Mage";
-	s += "/t 3: Rogue";
-	s += "/t 4: Gnome (for experts only)";
-	s += "/t 5: Dragonborn (for noobs)";
+	s += "\n 1: Warrior";
+	s += "\t 2: Mage";
+	s += "\t 3: Rogue";
+	s += "\t 4: Gnome (for experts only)";
+	s += "\t 5: Dragonborn (for noobs)";
 	System.out.print( s );
 
 	//instantiate the player's character
@@ -86,25 +86,33 @@ public class YoRPG
 	    fighterType = Integer.parseInt( in.readLine() );
 	}
 	catch (IOException e) { }
-
+	System.out.println(pat);
 	if (fighterType == 1) {
-	    Character pat = new Warrior( name );
+	    pat = new Warrior( name );
+		//System.out.println(pat);
 	}
 	else if (fighterType == 2) {
-	    Character pat = new Mage( name );
+	    pat = new Mage( name );
+		//System.out.println(pat);
 	}
 	else if (fighterType == 3) {
-	    Character pat = new Rogue( name );
+	    pat = new Rogue( name );
+		//System.out.println(pat);
 	}
 	else if (fighterType == 4) {
-	    Character pat = new Gnome( name );
+	    pat = new Gnome( name );
+		//System.out.println(pat);
 	}
 	else if (fighterType == 5) {
-	    Character pat = new Dragonborn( name );
+	    pat = new Dragonborn( name );
+		//System.out.println(pat);
 	}
 	else {
-	    Character pat = new Warrior( name );
+	    pat = new Warrior( name );
+		//System.out.println(pat);
 	}
+	//System.out.println(pat);
+	
 
     }//end newGame()
 
@@ -119,14 +127,17 @@ public class YoRPG
 
 	int i = 1;
 	int d1, d2;
-
-	if ( Math.random() >= ( difficulty / 3.0 ) )
-	    System.out.println( "\nNothing to see here. Move along!" );
+	
+	//System.out.println(difficulty);
+	if ( Math.random() >= ( difficulty / 3.0 ) ){
+		//System.out.println(difficulty/3.0);
+		System.out.println( "\nNothing to see here. Move along!" );
+		}
 	else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
 	    smaug = new Monster();
-
+		System.out.println(pat);
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
 		// Give user the option of using a special attack:

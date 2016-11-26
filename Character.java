@@ -21,7 +21,7 @@ public class Character {
       post: initializes instance vars.
       =============================================*/
     public Character() {
-	_name = "bilbo baggins";
+	_name = "No Name";
 	_hitPts = 125;
 	_strength = 100;
 	_defense = 40;

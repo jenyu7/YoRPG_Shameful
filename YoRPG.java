@@ -21,6 +21,7 @@ public class YoRPG
     private int moveCount;
     private boolean gameOver;
     private int difficulty;
+	private int fighterType;
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -82,7 +83,7 @@ public class YoRPG
 
 	//instantiate the player's character
 	try {
-	    int fighterType = Integer.parseInt( in.readLine() );
+	    fighterType = Integer.parseInt( in.readLine() );
 	}
 	catch (IOException e) { }
 

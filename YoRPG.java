@@ -169,7 +169,7 @@ public class YoRPG
 	    if ( !smaug.isAlive() && !pat.isAlive() ) {
 		System.out.println( "'Twas an epic battle, to be sure... " + 
 				    "You cut ye olde monster down, but " +
-				    "with its dying breath ye olde monster. " +
+				    "with its dying breath ye olde monster " +
 				    "laid a fatal blow upon thy skull." );
 		return false;
 	    }

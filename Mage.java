@@ -41,6 +41,11 @@ public class Mage extends Character {
 	_attack = 1.5;
 	_defense = 10;
     }
+	
+	public void heal(){
+		int inc = (int)(Math.random() * 20);
+		_defense += inc;
+	}
 
     //revert to normal mode
     public void normalize() {

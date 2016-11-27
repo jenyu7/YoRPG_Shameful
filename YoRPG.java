@@ -22,6 +22,8 @@ public class YoRPG
     private boolean gameOver;
     private int difficulty;
 	private int fighterType;
+	private int id;
+	private String gender;
 
     private InputStreamReader isr;
     private BufferedReader in;
@@ -72,6 +74,26 @@ public class YoRPG
 	    name = in.readLine();
 	}
 	catch ( IOException e ) { }
+	
+	/*s = name + ", what is thee gender?\n";
+	s += "\t1: Female \n";
+	s += "\t2: Male \n";
+	s += "\t3: Neither\n";
+	s += "Selection: ";
+	System.out.print(s);
+	try {
+		int foo = Integer.parseInt(in.readLine());
+		if (foo == 1){
+			gender = "herself";
+		}
+		else if (foo == 2){
+			gender = "himself";
+		}
+		else{
+			gender = "his'erself";
+		}
+	}
+	catch (IOException e){ }*/
 
     s = "Intrepid warrior, what class of duelistr doth thee wish to beest ? (State your fighting type): ";
 	s += "\n 1: Warrior";
@@ -89,26 +111,32 @@ public class YoRPG
 	//System.out.println(pat);
 	if (fighterType == 1) {
 	    pat = new Warrior( name );
+		id = 1;
 		//System.out.println(pat);
 	}
 	else if (fighterType == 2) {
 	    pat = new Mage( name );
+		id = 2;
 		//System.out.println(pat);
 	}
 	else if (fighterType == 3) {
 	    pat = new Rogue( name );
+		id = 3;
 		//System.out.println(pat);
 	}
 	else if (fighterType == 4) {
 	    pat = new Gnome( name );
+		id = 4;
 		//System.out.println(pat);
 	}
 	else if (fighterType == 5) {
 	    pat = new Dragonborn( name );
+		id = 5;
 		//System.out.println(pat);
 	}
 	else {
 	    pat = new Warrior( name );
+		id = 1;
 		//System.out.println(pat);
 	}
 	//System.out.println(pat);
@@ -162,6 +190,17 @@ public class YoRPG
 
 		System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
 				    " for " + d2 + " points of damage.");
+		if (id == 2){
+			if (Math.random() > 0.7){
+				pat.heal();
+				System.out.println("\n You healed yourself!");
+				//System.out.println("\n" + name + " healed " + gender + " " + pat.heal() + " health points.");
+			}
+			else{
+				System.out.println("\n You were unable to heal.");
+				//System.out.println("\n" + name + " was unable to heal " + gender + ".");
+			}
+		}
 	    }//end while
 
 	    //option 1: you & the monster perish

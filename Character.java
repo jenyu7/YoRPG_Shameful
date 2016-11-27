@@ -79,7 +79,7 @@ public abstract class Character {
 	if (_hitPts < 0) {_hitPts = 0;}
     }
 
-
+	public abstract void heal();
     public abstract void specialize();/*{
 	oldStrength = _strength;
 	oldDefense = _defense;

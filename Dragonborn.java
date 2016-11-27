@@ -47,13 +47,13 @@ public class Dragonborn extends Character {
 	_defense = 50;
     }
 
-    public void heal(){
-
-    }
-
     public int attack( Character opponent ) {
-
-	int damage = (int)( (_strength * _attack) - opponent.getDefense() );
+	int attack1;
+	int attack2;
+	int damage;
+	attack1 = (int)( (_strength * _attack) - opponent.getDefense() );
+	attack2 = (int)( (_strength * _attack) - opponent.getDefense() );
+	damage = attack1 + attack2;
 	//System.out.println( "\t\t**DIAG** damage: " + damage );
 
 	if ( damage < 0 ){
@@ -63,5 +63,10 @@ public class Dragonborn extends Character {
 
 	return damage;
     }//end attack
+
+    public void heal(){
+	int inc = (int)(Math.random() * 20);
+	_defense += inc;
+    }
 }//end class Dragonborn
 

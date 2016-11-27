@@ -5,6 +5,7 @@ public class Rogue extends Character {
     // other attribs inerited from superclass
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+    double critChance; //rogues have a chance to crit 10% of the time, dealing 1,5 times damage.
 
     /*=============================================
       default constructor
@@ -17,6 +18,7 @@ public class Rogue extends Character {
 	_strength = 350;
 	_defense = 15;
 	_attack = .8;
+	critChance = 0.1;
     }
 
 
@@ -52,5 +54,22 @@ public class Rogue extends Character {
 
     }
 
+    public int attack( Character opponent ) {
+	int damage;
+	if (Math.random() < critChance){
+	    damage = (int)( (_strength * _attack * 1.5) - opponent.getDefense() );
+	    //System.out.println( "\t\t**DIAG** damage: " + damage );
+	}
+	else{
+	    damage = (int)( (_strength * _attack) - opponent.getDefense() );
+	    //System.out.println( "\t\t**DIAG** damage: " + damage );
+	}
+	if ( damage < 0 ){
+	    damage = 0;
+	}
+	opponent.lowerHP( damage );
+
+	return damage;
+    }//end attack
 }//end class Rogue
 

@@ -55,18 +55,7 @@ public abstract class Character {
             Calls opponent's lowerHP() method to inflict damage. 
 	    Returns damage dealt.
       =============================================*/
-    public int attack( Character opponent ) {
-
-	int damage = (int)( (_strength * _attack) - opponent.getDefense() );
-	//System.out.println( "\t\t**DIAG** damage: " + damage );
-
-	if ( damage < 0 )
-	    damage = 0;
-
-	opponent.lowerHP( damage );
-
-	return damage;
-    }//end attack
+    public abstract int attack(Character opponent);
 
 
     /*=============================================
@@ -79,7 +68,7 @@ public abstract class Character {
 	if (_hitPts < 0) {_hitPts = 0;}
     }
 
-	public abstract void heal();
+    public abstract void heal();
     public abstract void specialize();/*{
 	oldStrength = _strength;
 	oldDefense = _defense;

@@ -42,10 +42,10 @@ public class Mage extends Character {
 	_defense = 10;
     }
 	
-	public void heal(){
-		int inc = (int)(Math.random() * 20);
-		_defense += inc;
-	}
+    public void heal(){
+	int inc = (int)(Math.random() * 20);
+	_defense += inc;
+    }
 
     //revert to normal mode
     public void normalize() {
@@ -53,5 +53,17 @@ public class Mage extends Character {
 	_defense = 25;
     }
 
+    public int attack( Character opponent ) {
+
+	int damage = (int)( (_strength * _attack) - opponent.getDefense() );
+	//System.out.println( "\t\t**DIAG** damage: " + damage );
+
+	if ( damage < 0 ){
+	    damage = 0;
+	}
+	opponent.lowerHP( damage );
+
+	return damage;
+    }//end attack
 }//end class Mage
 

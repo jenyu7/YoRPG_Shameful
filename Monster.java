@@ -23,7 +23,17 @@ public class Monster extends Character {
 	_attack = 1;
     }
 
+    public void heal(){
 
+    }
+
+    public void normalize(){
+
+    }
+
+    public void specialize(){
+
+    }
 }//end class Monster
 
 

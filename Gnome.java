@@ -48,5 +48,9 @@ public class Gnome  extends Character {
 	_defense = 20;
     }
 
+    public void heal(){
+
+    }
+
 }//end class Gnome
 

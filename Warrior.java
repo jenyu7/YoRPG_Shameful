@@ -56,5 +56,9 @@ public class Warrior extends Character {
 	_defense = 40;
     }
 
+    public void heal(){
+
+    }
+
 }//end class Warrior
 

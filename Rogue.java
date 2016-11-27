@@ -48,5 +48,9 @@ public class Rogue extends Character {
 	_defense = 25;
     }
 
+    public void heal(){
+
+    }
+
 }//end class Rogue
 

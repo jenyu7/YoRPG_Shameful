@@ -47,5 +47,8 @@ public class Dragonborn extends Character {
 	_defense = 50;
     }
 
+    public void heal(){
+
+    }
 }//end class Dragonborn
 

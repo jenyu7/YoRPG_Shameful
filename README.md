@@ -28,11 +28,11 @@
 	Hit enter
 3. The game will ask you for your name. Type in your name and hit enter. 
 4. The game will then ask what fighter type you want to be. Again, type in the number corresponding to the fighter type. Here are their bios: 
-	*Warrior: A bulky, tanky type of fighter who has a large amount of armor and health to soak up damage. They don't do much damage, but they are also very hard to kill.
-	*Mage: A fragile fighter that is capable of outputting large amounts of damage with their powerful spells, but have very low health and defense, meaning they also die very quickly.
-	*Rogue: A crafty fighter that can deal huge amounts of damage in short bursts. They rely on their speed to get in and out of situations without dying.
-	*Dragonborn: An absolute beast that can't be stopped by any force, human or otherwise.
-	*Gnome: A very weak fighter that doesn't deal much damage and doesn't have much health. They're not really that great at anything, but they're really fun and provide great moral support.
+	* Warrior: A bulky, tanky type of fighter who has a large amount of armor and health to soak up damage. They don't do much damage, but they are also very hard to kill.
+	* Mage: A fragile fighter that is capable of outputting large amounts of damage with their powerful spells, but have very low health and defense, meaning they also die very quickly.
+	* Rogue: A crafty fighter that can deal huge amounts of damage in short bursts. They rely on their speed to get in and out of situations without dying.
+	* Dragonborn: An absolute beast that can't be stopped by any force, human or otherwise.
+	* Gnome: A very weak fighter that doesn't deal much damage and doesn't have much health. They're not really that great at anything, but they're really fun and provide great moral support.
 4. You will then begin play. There are a maximum of 5 encounters, the difficulty you chose will correlate to how many times you actually encounter a monster. 
 5. Each time you encouter a monster, the game will ask you if you feel lucky or not. Enter your response according to the numbers, which again, link to answers. 
 6. Best of luck in your quest, intrepid warrior!

@@ -52,6 +52,10 @@ public class Gnome  extends Character {
 
     }
 
+    public void shrinkify() {
+	_defense *= 2;
+    }
+
     public int attack( Character opponent ) {
 
 	int damage = (int)( (_strength * _attack) - opponent.getDefense() );

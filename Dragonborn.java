@@ -68,5 +68,6 @@ public class Dragonborn extends Character {
 	int inc = (int)(Math.random() * 20);
 	_defense += inc;
     }
+    public void shrinkify() { }
 }//end class Dragonborn
 

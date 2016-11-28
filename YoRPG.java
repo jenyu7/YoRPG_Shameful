@@ -190,7 +190,7 @@ public class YoRPG
 
 		System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
 				    " for " + d2 + " points of damage.");
-		if (id == 2){
+		if (id == 2 || id == 5){
 			if (Math.random() > 0.7){
 				pat.heal();
 				System.out.println("\n You healed yourself!");
@@ -201,6 +201,17 @@ public class YoRPG
 				//System.out.println("\n" + name + " was unable to heal " + gender + ".");
 			}
 		}
+		if (id == 4) {
+		    if (Math.random() > 0.7) {
+			pat.shrinkify();
+			System.out.println("\n You shrunk yourself down!");
+		    }
+		    else {
+			System.out.println("\n You were unable to shrink.");
+		    }
+		}
+		    
+		    
 	    }//end while
 
 	    //option 1: you & the monster perish

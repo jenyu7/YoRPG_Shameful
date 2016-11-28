@@ -54,6 +54,8 @@ public class Rogue extends Character {
 
     }
 
+    public void shrinkify() {}
+
     public int attack( Character opponent ) {
 	int damage;
 	if (Math.random() < critChance){

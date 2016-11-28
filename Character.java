@@ -69,6 +69,7 @@ public abstract class Character {
     }
 
     public abstract void heal();
+    public abstract void shrinkify();
     public abstract void specialize();/*{
 	oldStrength = _strength;
 	oldDefense = _defense;

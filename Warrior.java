@@ -60,6 +60,8 @@ public class Warrior extends Character {
 
     }
 
+    public void shrinkify() {}
+
     public int attack( Character opponent ) {
 
 	int damage = (int)( (_strength * _attack) - opponent.getDefense() );

@@ -47,6 +47,8 @@ public class Mage extends Character {
 	_defense += inc;
     }
 
+    public void shrinkify() {}
+    
     //revert to normal mode
     public void normalize() {
 	_attack = .8;
